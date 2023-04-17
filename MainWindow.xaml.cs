@@ -24,55 +24,109 @@ namespace SimpleCalculator
         {
             InitializeComponent();
         }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtNumber.Text = " ";
+        }
+
         ///1到9按鍵綁定
         private void btnZero_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "0";
+            if (txtNumber.Text == "0")
+                txtNumber.Text = txtNumber.Text + "0";
         }
 
         private void btnOne_Click(object sender, RoutedEventArgs e)
         {
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
             txtNumber.Text = txtNumber.Text + "1";
         }
 
         private void btnTwo_Click(object sender, RoutedEventArgs e)
         {
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
             txtNumber.Text = txtNumber.Text + "2";
         }
 
-        private void btnThree_Click(object sender, RoutedEventArgs e)
+
+            private void btnThree_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "3";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "3";      
         }
 
         private void btnFour_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "4";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "4";            
         }
 
         private void btnFive_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "5";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "5";            
         }
 
         private void btnSix_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "6";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "6";            
         }
 
         private void btnSeven_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "7";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "7";           
         }
 
         private void btnEight_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "8";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "8"; 
         }
 
         private void btnNine_Click(object sender, RoutedEventArgs e)
         {
-            txtNumber.Text = txtNumber.Text + "";
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text + "9";      
         }
+
     }
 }
