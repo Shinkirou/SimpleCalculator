@@ -199,8 +199,9 @@ namespace SimpleCalculator
         private void btnDot_Click(object sender, RoutedEventArgs e)
         {
             // 確認輸入文字框中完全沒有小數點
-            if (txtNumber.Text.IndexOf(".") == -1)
+            if (txtNumber.Text.IndexOf(".") == -1) //尋找txtNumber.Text中有沒有小數點，沒有為'-1'
                 txtNumber.Text = txtNumber.Text + ".";
+            // 可使用 if (!txtNumber.Text.IndexOf(".") == -1)，'!'為FALSE
         }
     }
 }
