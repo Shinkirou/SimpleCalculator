@@ -192,8 +192,9 @@ namespace SimpleCalculator
                 txtNumber.Text = "";
             }
 
-            txtNumber.Text = txtNumber.Text + "9";      
+            txtNumber.Text = txtNumber.Text + "9";
         }
+
 
         ///小數點事件綁定
         private void btnDot_Click(object sender, RoutedEventArgs e)
@@ -202,6 +203,36 @@ namespace SimpleCalculator
             if (txtNumber.Text.IndexOf(".") == -1) //尋找txtNumber.Text中有沒有小數點，沒有為'-1'
                 txtNumber.Text = txtNumber.Text + ".";
             // 可使用 if (!txtNumber.Text.IndexOf(".") == -1)，'!'為FALSE
+        }
+
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+
+            txtNumber.Text = txtNumber.Text.Substring(0, txtNumber.Text.Length-1);
+
+            if (txtNumber.Text.Length == 0)
+            {
+                txtNumber.Text = "0";
+            }
+        }
+
+        private void btnPercentage_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtNumber.Text == "0")
+            {
+                txtNumber.Text = "";
+            }
+            float finalResults = 0f; //宣告最後計算結果變數
+            firstNumber = Convert.ToSingle(txtNumber.Text); //將輸入文字框轉換成浮點數，存入第二個數字的全域變數
+
+            finalResults = firstNumber / 100;
+
+            txtNumber.Text = string.Format("{0:0.##########}", finalResults);
         }
     }
 }
